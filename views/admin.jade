@@ -1,0 +1,21 @@
+extends layout
+
+block content		
+	.content
+		#wrapper
+			#testimonials
+				table(class="table")
+					thead
+						th User
+						th Testimonial
+						th 
+					tbody
+						for item in items
+							tr(style="background-color: " + (item.approved == 1 ? "rgb(183,227,168)" : "rgb(250,205,195)"))
+								td= item.user
+								td= item.text
+								td
+									a.approve(href="/testimonials/approve/" rel=item._id style="display: " + (item.approved == 1 ? "none" : "inline")) Approve
+			// /TESTIMONIALS
+		// /WRAPPER
+script(src="/javascripts/global.js")

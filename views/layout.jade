@@ -1,0 +1,19 @@
+doctype html
+html
+head
+	title='Testimonial'
+	link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
+	link(rel='stylesheet', href='/stylesheets/stylesheet.css')
+body
+	.nav-container
+		nav(class="navbar navbar-default main-nav")
+			.navbar-header
+				a(class="navbar-brand" href="/") Home
+				a(class="navbar-brand" href="/Testimonials") Testimonials
+				a(class="navbar-brand" href="/Testimonials/admin") Admin
+	block content
+	
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
+script(src="/javascripts/rotateQuotes.js")
+script(src="/javascripts/global.js")
