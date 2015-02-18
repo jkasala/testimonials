@@ -2,20 +2,20 @@ extends layout
 
 block content		
 	.content
-		#wrapper
-			#testimonials
-				table(class="table")
+			#admin-testimonials
+				table
 					thead
 						th User
 						th Testimonial
 						th 
 					tbody
 						for item in items
-							tr(style="background-color: " + (item.approved == 1 ? "rgb(183,227,168)" : "rgb(250,205,195)"))
+							tr(style="background-color: " + (item.approved == 1 ? "rgb(184,240,180)" : "rgb(250,205,195)"))
 								td= item.user
 								td= item.text
 								td
-									a.approve(href="/testimonials/approve/" rel=item._id style="display: " + (item.approved == 1 ? "none" : "inline")) Approve
-			// /TESTIMONIALS
-		// /WRAPPER
+									form(name="Approve", action="/testimonials/approve", method="post")
+										input(type="hidden", name="id", value=item._id)
+										input(type="hidden", name="approved", value=item.approved)
+										input(type="submit", value=(item.approved == 1 ? "Unapprove" : "Approve"))
 script(src="/javascripts/global.js")

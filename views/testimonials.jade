@@ -2,14 +2,19 @@ extends layout
 
 block content		
 	.content
+		h3 Testimonials
+		hr
 		#quotes
 			for item in items
-				p(class="quote" style="display: none")= item.text
+				.quote
+					p(class="quote-text")= item.text
+					p(class="quote-author")=item.user
+					hr
 
 		#newTestimonial
 			h3 Write a testimonial
 			form(name="newTestimonial", action="testimonials/add", method="post")
-				input(type="text", name="user", placeholder="Your Name")
+				input(type="text", id="form-user", name="user", placeholder="Your Name")
 				br
 				textarea(name="text", rows="8", cols="60", placeholder="Enter your testimonial here")
 				input(type="hidden", name="approved", value="0")

@@ -4,3 +4,14 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
+# Node modules
+node_modules
+
+# Log files
+*.log
+
+# Bin directory
+bin
+
+# Batch files
+*.bat

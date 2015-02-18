@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 // database
 var mongo = require('mongoskin');
+var ObjectID = require('mongoskin').ObjectID;
 var db = mongo.db("mongodb://localhost:27017/testimonial", {native_parser:true});
 
 var routes = require('./routes/index');
