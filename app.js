@@ -7,11 +7,9 @@ var bodyParser = require('body-parser');
 
 // database
 var mongo = require('mongoskin');
-var ObjectID = require('mongoskin').ObjectID;
 var db = mongo.db("mongodb://localhost:27017/testimonial", {native_parser:true});
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var testimonials = require('./routes/testimonials');
 
 var app = express();
@@ -34,7 +32,6 @@ app.use(function(req,res,next){
 });
 
 app.use('/', routes);
-app.use('/users', users);
 app.use('/testimonials', testimonials);
 
 
