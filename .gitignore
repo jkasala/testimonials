@@ -10,8 +10,8 @@ node_modules
 # Log files
 *.log
 
-# Bin directory
-bin
-
 # Batch files
 *.bat
+
+# Data directory
+data
