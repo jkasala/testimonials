@@ -47,8 +47,14 @@ body {
   margin-bottom:10px;
 }
 
+#admin-testimonials {
+  width:100%;
+}
+
 #admin-testimonials table {
-  width: 100%;
+  width:100%;
+  min-width:800px;
+  table-layout: fixed;
 }
 
 #admin-testimonials table  tr {
@@ -56,6 +62,10 @@ body {
   border-bottom:2px solid white;
 }
 
-#admin-testimonials table  th, table td {
-  padding: 5px;
+#admin-testimonials table td, table th {
+  padding: 5px 15px 5px 15px;
+}
+
+#admin-testimonials table td {
+  word-wrap:break-word
 }

@@ -5,15 +5,17 @@ block content
 			#admin-testimonials
 				table
 					thead
-						th User
-						th Testimonial
-						th 
+						th(style="width:20%") User
+						th(style="width:45%") Testimonial
+						th(style="width:20%") Date
+						th(style="width:15%")
 					tbody
 						for item in items
 							tr(style="background-color: " + (item.approved == 1 ? "rgb(220,245,255)" : "rgb(250,205,195)"))
 								td= item.user
-								td= item.text
-								td
+								td(style="width:400px")= item.text
+								td(style="width:200px")= item.date
+								td(style="width:100px")
 									form(name="Approve", action="/testimonials/approve", method="post")
 										input(type="hidden", name="id", value=item._id)
 										input(type="hidden", name="approved", value=item.approved)

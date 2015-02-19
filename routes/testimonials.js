@@ -1,5 +1,6 @@
 var express = require('express');
 var ObjectID = require('mongoskin').ObjectID;
+var moment = require('moment');
 var router = express.Router();
 
 router.get('/', function(req, res) {
@@ -20,9 +21,10 @@ router.get('/admin', function(req, res) {
 
 router.post('/add', function(req, res) {
     var db = req.db;
+    req.body.date = moment().format('MMMM Do YYYY, h:mm:ss a');
     db.collection('testimonials').insert(req.body, function(err, result){
     	if(err) next(err);
-    	res.redirect('/testimonials/');
+    	res.redirect('/testimonials');
     });
 });
 
