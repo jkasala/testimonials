@@ -4,10 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var dbconfig = require('./dbconfig');
 
 // database
 var mongo = require('mongoskin');
-var db = mongo.db("mongodb://localhost:27017/testimonial", {native_parser:true});
+var db = mongo.db(dbconfig.connection, {native_parser:true});
 
 var routes = require('./routes/index');
 var testimonials = require('./routes/testimonials');
