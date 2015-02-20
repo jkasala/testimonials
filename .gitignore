@@ -16,9 +16,6 @@ node_modules
 # Data directory
 data
 
-# Config
-dbconfig.js
-
 # Heroku procfile
 Procfile
 
