@@ -2,22 +2,31 @@ extends layout
 
 block content		
 	.content
-			#admin-testimonials
-				table
-					thead
-						th(style="width:20%") User
-						th(style="width:45%") Testimonial
-						th(style="width:20%") Date
-						th(style="width:15%")
-					tbody
-						for item in items
-							tr(style="background-color: " + (item.approved == 1 ? "rgb(220,245,255)" : "rgb(250,205,195)"))
-								td= item.user
-								td(style="width:400px")= item.text
-								td(style="width:200px")= item.date
-								td(style="width:100px")
-									form(name="Approve", action="/testimonials/approve", method="post")
-										input(type="hidden", name="id", value=item._id)
-										input(type="hidden", name="approved", value=item.approved)
-										input(type="submit", value=(item.approved == 1 ? "Unapprove" : "Approve"))
-script(src="/javascripts/global.js")
+		p(class="todo") ****** TODO: add user authentication for this page
+		hr
+		#admin-testimonials
+			p(class="note") * 'Approved' testimonials will show up on the 'Testimonials' page.
+			table
+				thead
+					th(style="width:20%") User
+					th(style="width:35%") Testimonial
+					th(style="width:20%") Date
+					th(style="width:15%")
+					th(style="width:10%")
+				tbody
+					for item in items
+						tr(style="background-color: " + (item.approved == 1 ? "rgb(220,245,255)" : "rgb(250,205,195)"))
+							td= item.user
+							td= item.text
+							td= item.date
+							td
+								form(name="Approve", action="/testimonials/approve", method="post")
+									input(type="hidden", name="id", value=item._id)
+									input(type="hidden", name="approved", value=item.approved)
+									button(class="btn btn-default" type="submit")=(item.approved == 1 ? "Unapprove" : "Approve")
+							td
+								form(name="Approve", action="/testimonials/delete", method="post")
+									input(type="hidden", name="id", value=item._id)
+									button(class="btn btn-default" type="submit" name="delete") Delete
+
+	

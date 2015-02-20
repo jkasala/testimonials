@@ -38,4 +38,13 @@ router.post('/approve', function(req, res) {
     });
 });
 
+router.post('/delete', function(req, res) {
+    var db = req.db;
+    var id = req.body.id;
+    db.collection('testimonials').remove({_id:new ObjectID(id)}, function(err) {
+    	if(err) next(err);
+		res.redirect('/testimonials/admin');
+    });
+});
+
 module.exports = router;

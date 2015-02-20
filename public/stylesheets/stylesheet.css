@@ -69,3 +69,13 @@ body {
 #admin-testimonials table td {
   word-wrap:break-word
 }
+
+.todo {
+  color:green;
+  font-style: italic;
+}
+
+.note {
+  color:rgb(80,80,80);
+  font-style: italic;
+}
