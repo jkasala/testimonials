@@ -12,10 +12,12 @@ http://testimonials.jeremykasala.com
 - Clone the repo and install dependencies: 
 ```sh 
 git clone https://github.com/jkasala/testimonials.git 
+cd testimonials
 npm install
 ```
-- Create a new directory in the root folder called 'data'. 
+- Create a new directory in the root folder called 'data', then tell mongoDB this is where the database files will live
 ```sh 
+mkdir data
 /path/to/mongodb-installation/bin/mongod --dbpath data
 ```
 - start the app
