@@ -8,8 +8,18 @@ http://testimonials.jeremykasala.com
 
 ##Usage
 
-- First, you must have Node.js and the Express.js framework installed.
-- Install MongoDB
-- Open a command shell cd to the directory where you downloaded the app.  Run 'npm install' to get the app dependencies.
-- Create a new directory in the app folder called 'data'.  Open another command shell in this directory, and run 'path/to/mongodb/bin/mongod --dbpath data'
-- Run 'npm start' and you should be able to access the app in the browser at http://localhost:3000
+- You must have Node.js, the Express framework, and MongoDB installed
+- Clone the repo and install dependencies: 
+```sh 
+git clone https://github.com/jkasala/testimonials.git 
+npm install
+```
+- Create a new directory in the root folder called 'data'. 
+```sh 
+/path/to/mongodb-installation/bin/mongod --dbpath data
+```
+- start the app
+```sh 
+npm start
+```
+- You should be able to access the app in the browser at http://localhost:3000
