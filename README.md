@@ -20,7 +20,9 @@ npm install
 mkdir data
 /path/to/mongodb-installation/bin/mongod --dbpath data
 ```
-- start the app
+- If you want, you can change your database connection in dbconfig.js.
+
+- Start the app
 ```sh 
 npm start
 ```
