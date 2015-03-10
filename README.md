@@ -9,21 +9,25 @@ http://testimonials.jeremykasala.com
 ##Usage
 
 - You must have Node.js, the Express framework, and MongoDB installed
+
 - Clone the repo and install dependencies: 
 ```sh 
 git clone https://github.com/jkasala/testimonials.git 
 cd testimonials
 npm install
 ```
+
 - Create a new directory in the root folder called 'data', then tell mongoDB this is where the database files will live
 ```sh 
 mkdir data
 /path/to/mongodb-installation/bin/mongod --dbpath data
 ```
+
 - If you want, you can change your database connection in dbconfig.js.
 
 - Start the app
 ```sh 
 npm start
 ```
+
 - You should be able to access the app in the browser at http://localhost:3000
