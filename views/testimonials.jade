@@ -2,6 +2,8 @@ extends layout
 
 block content		
 	.content
+		if addStatus != undefined && addStatus == "success"
+			div(class="alert alert-success" role="alert") Your testimonial has been submitted!
 		h3 Testimonials
 		hr
 		#quotes

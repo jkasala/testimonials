@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
 	var db = req.db;
 	db.collection('testimonials').find({approved:1}).toArray(function (err, items) {
 		if(err) next(err);
-        res.render('testimonials', { "items" : items });
+        res.render('testimonials', { "items" : items, "addStatus" : req.param("add") });
     });
 });
 
@@ -24,7 +24,7 @@ router.post('/add', function(req, res) {
     req.body.date = moment().format('MMMM Do YYYY, h:mm:ss a');
     db.collection('testimonials').insert(req.body, function(err, result){
     	if(err) next(err);
-    	res.redirect('/testimonials');
+    	res.redirect('/testimonials?add=success');
     });
 });
 
