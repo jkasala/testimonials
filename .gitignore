@@ -19,3 +19,5 @@ data
 # Heroku procfile
 Procfile
 
+
+dbconfig.js
