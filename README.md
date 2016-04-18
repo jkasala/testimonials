@@ -2,9 +2,6 @@
 
 This is a simple Nodejs + Express + MongoDB app that implements the popular 'testimonials' section you see on all the websites these days.  Users can write up a testimonial and it gets put in the database.  The website administrator can use the 'admin' page to choose which testimonials get displayed.
 
-##Demo
-
-http://testimonials.jeremykasala.com
 
 ##Usage
 
